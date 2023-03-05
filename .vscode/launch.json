@@ -11,16 +11,17 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "type": "node"
-        },
+            "type": "node",
+         
         {
             "type": "node",
             "request": "launch",
-            "name": "Launch Program",
+            "name": "Launch in WSL",
+            "useWSL": true,
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}\\6m-software-1.3-test-method\\assignment\\q1-control-flow.js"
+            "program": "${workspaceFolder}/6m-software-1.3-test-method/assignment/q1-control-flow.js"
         }
     ]
 }
