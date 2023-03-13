@@ -19,17 +19,19 @@
         d.process(); // "Allowed"
 */
 
+class Permission {
+
 static OperationsConst = {
     CREATE:"CREATE",
     READ:"READ",
     UPDATE:"UPDATE",
     DELETE:"DELETE"
-}
+};
 static RolesConst = {
     OWNER:"OWNER",
     EDITOR:"EDITOR",
     READER:"READER"
-}
+};
 
 // private variables
 #role;
@@ -69,7 +71,6 @@ check(){
 }
 }
 
-// Add code here
 class Document extends Permission{
 constructor(role, operation, content){
     super(role, operation);
@@ -86,5 +87,14 @@ process(){
 }
 }
 
+// scenario 1
 const d = new Document(Permission.RolesConst.EDITOR, Permission.OperationsConst.UPDATE, "Hello content");
+d.process();
+
+//scenario 2
+const d1 = new Document(Permission.RolesConst.READER, Permission.OperationsConst.UPDATE, "Hello content");
+d.process();
+
+//scenario 3
+const d2 = new Document(Permission.RolesConst.OWNER, Permission.OperationsConst.DELETE, "Hello content")
 d.process();
