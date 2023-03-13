@@ -1,23 +1,4 @@
-/*
-    Create a class "Document" that extends "Permission". In the Document class,
-    
-    - there should be a constructor that takes in 3 arguments: 
-        1. role (pass to parent constructor using "super")
-        2. operation (pass to parent constructor using "super")
-        3. content (store in private variable)
-    - there should be a function "process()" that calls "check()" function declared in the Permission class.
-    
-    Instantiate from the Document class to create an object that calls "process()" with the following output:
-    Scenario 1:
-        const d = new Document(Permission.RolesConst.EDITOR, Permission.OperationsConst.UPDATE, "Hello content")
-        d.process(); // "Allowed"
-    Scenario 2:
-        const d = new Document(Permission.RolesConst.READER, Permission.OperationsConst.UPDATE, "Hello content")
-        d.process(); // "Blocked"
-    Scenario 3:
-        const d = new Document(Permission.RolesConst.OWNER, Permission.OperationsConst.DELETE, "Hello content")
-        d.process(); // "Allowed"
-*/
+
 
 class Permission {
 
